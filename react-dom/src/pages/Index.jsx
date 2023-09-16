@@ -5,10 +5,14 @@ import { obtenerClientes } from "../data/clientes";
 /* Funciòn especifica del loader, en el main recuerda que se hace el llamado correspondiente tambièn  */
 
 export function loader(){
-    return obtenerClientes();
+    /* Esto es el formato de Json, se esta extrayendo de data, osea se esta haciendo uso de la API o el 
+    REST API PARA HACER UNA SIMULACION a una base de datos  */
+    const clientes=obtenerClientes();
+    return clientes;
 }
 
 function Index(){
+    /* Bueno y la funcion do el const debajo es para crear  */
     const clientes=useLoaderData();
   return (
 <>

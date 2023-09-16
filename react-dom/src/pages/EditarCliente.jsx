@@ -1,12 +1,21 @@
-import React from 'react'
-import { Navigate, Outlet,Form,useActionData, redirect} from 'react-router-dom'
-import Formulario from '../components/Formulario'
-import { Link } from 'react-router-dom'
-import { useNavigate } from 'react-router-dom'
-import Error from '../components/Error'
-import { agregarCliente } from '../data/clientes'
+import { Form, Link, redirect, useActionData, useLoaderData} from "react-router-dom"
+import { obtenerCliente, actualizarCliente } from "../data/clientes"
+import Formulario from "../components/Formulario"
+import Error from "../components/Error"
 
-export async function action({request}){
+export async function  loader({params}){
+   const cliente= await obtenerCliente(params.clientesId)
+   if(Object.values(cliente).length===0){
+    throw new Response('',{
+      status:404,
+      statusText:'El cliente no fue encontrado'
+    })
+   }
+    console.log(cliente)
+    return cliente
+  }
+
+export async function action({request,params}){
   /* Recordar que request siempre es necesario cuando sse trata de la función action */
   /* Las 2 siguientes linesa de codigo son importantes para capturar el valor de lo ingresado.. */
   const formData= await request.formData();
@@ -24,17 +33,17 @@ export async function action({request}){
     return errores;
   }
   /* Se le agrega la función que realizará el llamado  */
-  await agregarCliente(datos);
+  await actualizarCliente(params.clientesId,datos);
   
   return redirect('/')
 }
 
-const NuevoCliente = () => {
+function EditarCliente() {
+  const cliente = useLoaderData();
   const errores=useActionData();
-  console.log("Determinado errores..",errores)
   return (
     <>
-      <div>Nuevo Cliente</div>
+    <div>Nuevo Cliente</div>
       <div className='w-full flex justify-end'>
         <Link className='bg-blue-500 px-3 py-1 rounded-lg text-yellow-50 font-bold'
         to={'/'}>Volver </Link>
@@ -46,13 +55,11 @@ const NuevoCliente = () => {
       className='mt-10'
       >
         {errores?.length >0 && errores.map((error,i)=><Error key={i}>{error}</Error>)}
-        <Formulario></Formulario>
-        <input type="submit" className="w-full bg-blue-500 py-3 text-white font-bold rounded-xl hover:bg-blue-700 cursor-pointer" value={"Enviar"}/>
+        <Formulario cliente={cliente}></Formulario>
+        <input type="submit" className="w-full bg-blue-500 py-3 text-white font-bold rounded-xl hover:bg-blue-700 cursor-pointer" value={"Guardar Cambios"}/>
       </Form>
-      </div>
-    </>
-
+      </div></>
   )
 }
 
-export default NuevoCliente
+export default EditarCliente

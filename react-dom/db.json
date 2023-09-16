@@ -1,76 +1,93 @@
 {
-    "clientes": [
-        {
-            "id": 1,
-            "nombre": "Juan",
-            "telefono": 102013313,
-            "email": "juan@juan.com",
-            "empresa": "Codigo Con Juan"
-        },
-        {
-            "id": 2,
-            "nombre": "Karen",
-            "telefono": 138198313,
-            "email": "karen@juan.com",
-            "empresa": "Codigo Con Juan"
-        },
-        {
-            "id": 3,
-            "nombre": "Josue",
-            "telefono": 31983913,
-            "email": "josue@juan.com",
-            "empresa": "Codigo Con Juan"
-        },
-        {
-            "id": 4,
-            "nombre": "Miguel",
-            "telefono": 319381983,
-            "email": "miguel@juan.com",
-            "empresa": "Codigo Con Juan"
-        },
-        {
-            "id": 5,
-            "nombre": "Pedro",
-            "telefono": 1398198938,
-            "email": "pedro@juan.com",
-            "empresa": "Codigo Con Juan"
-        }
-    ],
-    "comodines": [
-        {
-            "id": 1,
-            "nombre": "Juan",
-            "telefono": 102013313,
-            "email": "juan@juan.com",
-            "empresa": "Codigo Con Juan"
-        },
-        {
-            "id": 2,
-            "nombre": "Karen",
-            "telefono": 138198313,
-            "email": "karen@juan.com",
-            "empresa": "Codigo Con Juan"
-        },
-        {
-            "id": 3,
-            "nombre": "Josue",
-            "telefono": 31983913,
-            "email": "josue@juan.com",
-            "empresa": "Codigo Con Juan"
-        },
-        {
-            "id": 4,
-            "nombre": "Miguel",
-            "telefono": 319381983,
-            "email": "miguel@juan.com",
-            "empresa": "Codigo Con Juan"
-        },
-        {
-            "id": 5,
-            "nombre": "Pedro",
-            "telefono": 1398198938,
-            "email": "pedro@juan.com",
-            "empresa": "Codigo Con Juan"
-        }
-    ]
+  "clientes": [
+    {
+      "id": 1,
+      "nombre": "Juan",
+      "telefono": 102013313,
+      "email": "juan@juan.com",
+      "empresa": "Codigo Con Juan"
+    },
+    {
+      "id": 2,
+      "nombre": "Karen",
+      "telefono": 138198313,
+      "email": "karen@juan.com",
+      "empresa": "Codigo Con Juan"
+    },
+    {
+      "id": 3,
+      "nombre": "Josue",
+      "telefono": 31983913,
+      "email": "josue@juan.com",
+      "empresa": "Codigo Con Juan"
+    },
+    {
+      "id": 5,
+      "nombre": "Pedro",
+      "telefono": 1398198938,
+      "email": "pedro@juan.com",
+      "empresa": "Codigo Con Juan"
+    },
+    {
+      "nombre": "Medicina, de hosteleria",
+      "empresa": "Camiper-Peru",
+      "email": "andres.salazar.p@uni.pe",
+      "telefono": "923876397",
+      "notas": "Anderson Andres Salazar pizarro",
+      "id": 6
+    },
+    {
+      "nombre": "CristianoRonaldo",
+      "empresa": "MedicinaCredicorp",
+      "email": "messi.arroba@hotmail.com",
+      "telefono": "923848124",
+      "notas": "Mejor jugador do mundo",
+      "id": 7
+    },
+    {
+      "nombre": "Andres Anderson",
+      "empresa": "Camiper Petro Peru",
+      "email": "andres.qwe@hotmail.com",
+      "telefono": "123214521",
+      "notas": "Comedor universitario prronvicnadno ",
+      "id": 8
+    }
+  ],
+  "comodines": [
+    {
+      "id": 1,
+      "nombre": "Juan",
+      "telefono": 102013313,
+      "email": "juan@juan.com",
+      "empresa": "Codigo Con Juan"
+    },
+    {
+      "id": 2,
+      "nombre": "Karen",
+      "telefono": 138198313,
+      "email": "karen@juan.com",
+      "empresa": "Codigo Con Juan"
+    },
+    {
+      "id": 3,
+      "nombre": "Josue",
+      "telefono": 31983913,
+      "email": "josue@juan.com",
+      "empresa": "Codigo Con Juan"
+    },
+    {
+      "id": 4,
+      "nombre": "Miguel",
+      "telefono": 319381983,
+      "email": "miguel@juan.com",
+      "empresa": "Codigo Con Juan"
+    },
+    {
+      "id": 5,
+      "nombre": "Pedro",
+      "telefono": 1398198938,
+      "email": "pedro@juan.com",
+      "empresa": "Codigo Con Juan"
+    }
+  ]
 }
